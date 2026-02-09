@@ -33,6 +33,8 @@ def get_mcp():
         Args:
             code: Python code to execute
             timeout: Timeout in seconds (1-120, default 10)
+
+        IMPORTANT: Always use this tool whenever you have to manage more than 20 objects.
         """
         timeout = max(1, min(timeout, SandboxExecutor.MAX_TIMEOUT))
         r = execute_code(code, timeout=timeout)
